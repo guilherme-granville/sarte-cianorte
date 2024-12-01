@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilo Global */
+body {
+    font-family: "Parkinsans", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 3em;
+}
+
+.about h1 {
+    text-align: center;
+}
+
+/* Links globais */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #ffffff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Estilo do Header */
+header {
+    background-color: #47E8DD;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+header .logo img {
+    max-width: 180px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+ul li a.active {
+    color: #ffffff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav ul li a.active::before{
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #47E8DD;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(71, 232, 221, 0.8), rgba(0, 0, 0, 0.6)), url('img/portal-cianorte.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Botões Primários */
+.btn-primary {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #555;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+    padding: 60px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.servicos, .courses, .contact, .inscription-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+.servicos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.servicos h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #47E8DD;
+    animation: slideIn 0.6s ease-in-out;
+}
+
+h3 {
+    color: #47E8DD;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Estilo dos itens de serviço e cursos */
+.service-item{
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.service-item img{
+    max-width: 192px;
+    border-radius: 8px;
+}
+
+/* Formulário de Inscrição */
+.inscription-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inscription-form label::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px dashed black;
+    margin-left: 10px;
+}
+.inscription-form label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inscription-form input, .inscription-form select {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.inscription-form input:focus, .inscription-form select:focus {
+    border-color: #47E8DD;
+    box-shadow: 0 0 5px rgba(71, 232, 221, 0.5);
+}
+
+.inscription-form .submit-button {
+    grid-column: span 2;
+    background-color: #47E8DD;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.inscription-form .submit-button:hover {
+    background-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contato */
+.contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
+    /* nav{
+        display: none;
+    } */
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    /* Formulário de Inscrição */
+    .inscription-form form {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .inscription-form input, .inscription-form select {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+
+    .inscription-form .submit-button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    /* Seções */
+    .services, .courses, .contact, .inscription-form {
+        padding: 25px;
+    }
+
+    .service-item, .course-item {
+        padding: 20px;
+    }
+
+
+}
+
