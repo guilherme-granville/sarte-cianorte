@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,18 @@
     <link rel="shortcut icon" href="img/logo-sarte.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img class="logo-img" src="img/logo-sarte.png" alt="Sarte Cianorte Logo">
         </div>
-        <nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="/">Início</a></li>
                 <li><a href="/sobre.html">Sobre</a></li>
@@ -27,17 +34,23 @@
     <section class="services" id="servicos">
         <h2>Serviços</h2>
         <div class="servicos">
-        <div class="servico">
-        <h2>Transporte de Paciente</h2>
-        <p><strong>Ambulâncias de Suporte Básico (Tipo “B”):</strong> Para transporte inter-hospitalar de pacientes com risco conhecido e atendimento pré-hospitalar de pacientes com risco de vida desconhecido. Essas ambulâncias não requerem intervenção médica durante o transporte.</p>
+            <div class="service-item">
+                <h2>Transporte de Paciente</h2>
+                <p><strong>Ambulâncias de Suporte Básico (Tipo “B”):</strong> Para transporte inter-hospitalar de
+                    pacientes com risco conhecido e atendimento pré-hospitalar de pacientes com risco de vida
+                    desconhecido. Essas ambulâncias não requerem intervenção médica durante o transporte.</p>
 
-        <p><strong>Ambulância de Suporte Avançado (UTI Móvel, Tipo “D”):</strong> Destinada ao transporte de pacientes de alto risco em emergências pré-hospitalares, equipada com suporte médico para cuidados intensivos durante o transporte.</p>
-    </div>
-    <div class="servico">
-        <h2>Cobertura de Eventos</h2>
-        <p>O SARTE oferece apoio a eventos com equipes de socorro treinadas para atender emergências. Realizamos a cobertura de diversos eventos como rodeios, shows, formaturas, eventos empresariais, esportivos (motocross, automobilismo, lutas), eventos sociais, entre outros.</p>
-    </div>
-    </div>
+                <p><strong>Ambulância de Suporte Avançado (UTI Móvel, Tipo “D”):</strong> Destinada ao transporte de
+                    pacientes de alto risco em emergências pré-hospitalares, equipada com suporte médico para cuidados
+                    intensivos durante o transporte.</p>
+            </div>
+            <div class="service-item">
+                <h2>Cobertura de Eventos</h2>
+                <p>O SARTE oferece apoio a eventos com equipes de socorro treinadas para atender emergências. Realizamos
+                    a cobertura de diversos eventos como rodeios, shows, formaturas, eventos empresariais, esportivos
+                    (motocross, automobilismo, lutas), eventos sociais, entre outros.</p>
+            </div>
+        </div>
     </section>
 
     <section class="contact">
@@ -46,11 +59,14 @@
         <p><strong>Telefone:</strong> (44) 3629 5619 - Escritório</p>
         <p><strong>Telefone:</strong> (44) 99858 6868 - U.T.I Móvel</p>
         <p><strong>Horário de Atendimento:</strong> 24 Horas</p>
-        <p><strong>Redes Sociais:</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+        <p><strong>Redes Sociais:</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a
+                href="#">Twitter</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Sarte Cianorte - Todos os direitos reservados. Website by Edronet</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

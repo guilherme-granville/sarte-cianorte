@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
-
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -38,8 +38,6 @@ header a:hover {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* Estilo do Header */
 header {
     background-color: #47E8DD;
@@ -58,7 +56,7 @@ header .logo img {
     max-width: 180px;
 }
 
-
+/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -101,9 +99,34 @@ ul li a.active {
     color: #ffffff;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-nav ul li a.active::before{
+
+nav ul li a.active::before {
     width: 100%;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+#nav-menu ul {
+    display: flex;
+}
+
 
 /* Hero Section */
 .hero {
@@ -176,15 +199,16 @@ section {
     position: relative;
     overflow: hidden;
 }
-.servicos{
+
+.servicos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    align-items: stretch;
 }
-
 
 .servicos h1 {
     font-size: 3em;
@@ -195,6 +219,17 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Parkinsans', sans-serif;
+}
+
+.servico {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -227,7 +262,7 @@ h3 {
 }
 
 /* Estilo dos itens de serviço e cursos */
-.service-item{
+.service-item {
     background-color: #f9f9f9;
     padding: 25px;
     margin-bottom: 30px;
@@ -248,7 +283,7 @@ h3 {
     color: #555;
 }
 
-.service-item img{
+.service-item img {
     max-width: 192px;
     border-radius: 8px;
 }
@@ -272,6 +307,7 @@ h3 {
     border-bottom: 1px dashed black;
     margin-left: 10px;
 }
+
 .inscription-form label {
     display: flex;
     justify-content: space-between;
@@ -281,7 +317,8 @@ h3 {
     margin-bottom: 10px;
 }
 
-.inscription-form input, .inscription-form select {
+.inscription-form input,
+.inscription-form select {
     padding: 12px;
     font-size: 1em;
     border: 1px solid #ccc;
@@ -289,105 +326,154 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.inscription-form input:focus, .inscription-form select:focus {
+.inscription-form input:focus,
+.inscription-form select:focus {
     border-color: #47E8DD;
-    box-shadow: 0 0 5px rgba(71, 232, 221, 0.5);
+    outline: none;
 }
 
-.inscription-form .submit-button {
-    grid-column: span 2;
+.inscription-form button {
     background-color: #47E8DD;
     color: white;
-    padding: 15px;
     font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.inscription-form .submit-button:hover {
-    background-color: #333;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Contato */
-.contact {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9em;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-@media (max-width: 1000px) {
-    header {
-        flex-direction: column;
-    }
-    /* nav{
-        display: none;
-    } */
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+.inscription-form button:hover {
+    background-color: #3bb9b7;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    /* Hero Section */
     .hero h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
     }
 
     .hero p {
-        font-size: 1.1em;
-        line-height: 1.6;
+        font-size: 1.2em;
     }
 
-    /* Formulário de Inscrição */
+    .servicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servico {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     .inscription-form form {
         grid-template-columns: 1fr;
-        padding: 20px;
     }
 
-    .inscription-form input, .inscription-form select {
-        font-size: 1.1em;
-        padding: 10px;
+    nav ul {
+        display: block;
+        text-align: center;
+        gap: 10px;
     }
 
-    .inscription-form .submit-button {
-        font-size: 1.1em;
-        padding: 12px;
-    }
-
-    /* Seções */
-    .services, .courses, .contact, .inscription-form {
-        padding: 25px;
-    }
-
-    .service-item, .course-item {
-        padding: 20px;
+    header {
+        padding: 10px 20px;
     }
 
 
+
+
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #47E8DDe6;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8.5px;
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8.5px;
+    }
+
+    #nav-menu.active {
+        transform: translateX(0);
+    }
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
