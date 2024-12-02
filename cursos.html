@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cursos &#8211; Sarte Cianorte</title>
-    <link rel="shortcut icon" href="img/logo-sarte.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo-sarte.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img class="logo-img" src="img/logo-sarte.png" alt="Sarte Cianorte Logo">
+            <img class="logo-img" src="img/logo-sarte.webp" alt="Sarte Cianorte Logo">
         </div>
         <div class="hamburger" id="hamburger">
             <div></div>
@@ -20,19 +20,20 @@
         </div>
         <nav id="nav-menu">
             <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="/sobre.html">Sobre</a></li>
-                <li><a href="/servicos.html">Serviços</a></li>
-                <li><a class="active" href="/cursos.html">Cursos</a></li>
-                <li><a href="/inscricoes.html">Inscrições</a></li>
+                <li><a href="./">Início</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./servicos.html">Serviços</a></li>
+                <li><a class="active" href="./cursos.html">Cursos</a></li>
+                <li><a href="./inscricoes.html">Inscrições</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="courses">
         <h1>Cursos</h1>
-
-        <h2>Curso de Socorrista</h2>
+        <div class="cursos">
+            <div class="curso service-item">
+        <h2>Curso de Socorrista<img class="curso-img" src="img/logo-socorrista.webp" alt="Socorrista"></h2>
         <p>Neste curso, o aluno será capacitado para oferecer auxílio imediato a vítimas de acidentes e emergências súbitas, seja em casa, no trabalho, no trânsito ou em qualquer outro local. O objetivo é ensinar a reconhecer situações de emergência, avaliar sua gravidade e realizar os primeiros socorros de forma ágil e eficiente.</p>
 
         <h3>Conteúdo Programático Socorrista:</h3>
@@ -57,8 +58,10 @@
             <li>Simulações Práticas e Estágios</li>
         </ul>
         <p>Esse curso oferece uma formação completa e prática, preparando o aluno para atuar com segurança e competência em diversas situações de emergência.</p>
+    </div>
 
-        <h2>Curso de Brigada de Incêndio</h2>
+    <div class="curso service-item">
+        <h2>Curso de Brigada de Incêndio<img class="curso-img" src="img/logo-brigada.webp" alt="Socorrista"></h2>
         <p>O curso de Brigada de Incêndio capacita os participantes para ações preventivas e de resposta rápida a emergências. Os brigadistas aprenderão a identificar riscos, orientar a equipe, cumprir planos de emergência e agir em situações de combate a incêndios e evacuação de áreas.</p>
 
         <h3>Conteúdo Programático:</h3>
@@ -72,6 +75,8 @@
             <li>Simulações Práticas</li>
         </ul>
         <p>Esse curso prepara os brigadistas para atuar com rapidez e segurança em situações de emergência, cumprindo as normas de segurança e as regulamentações técnicas.</p>
+        </div>
+    </div>
     </section>
 
     <section class="inscription-form">
@@ -118,6 +123,7 @@
 
             <label for="curso">Curso:</label>
             <select id="curso" name="curso" required>
+                <option value="">Selecionar Curso...</option>
                 <option value="socorrista">Socorrista</option>
                 <option value="brigadista">Brigadista</option>
                 <option value="instrumentista">Instrumentista</option>
@@ -128,14 +134,13 @@
         </section>
     
 
-    <section class="contact">
-        <h2>Contato</h2>
-        <p><strong>Endereço:</strong> Rua Tocantins, 174-A, Zona 03, Cianorte, Paraná</p>
-        <p><strong>Telefone:</strong> (44) 3629 5619 - Escritório</p>
-        <p><strong>Telefone:</strong> (44) 99858 6868 - U.T.I Móvel</p>
-        <p><strong>Horário de Atendimento:</strong> 24 Horas</p>
-        <p><strong>Redes Sociais:</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
-    </section>
+        <section class="contact">
+            <h2>Contato</h2>
+            <p><strong>Endereço: </strong>Rua Tocantins, 174-A, Zona 03, Cianorte, Paraná</p>
+            <p><strong>Telefone: </strong>(44) 3629 5619 | (44) 99858 6868 - U.T.I Móvel</p>
+            <p><strong>Horário de Atendimento: </strong>  24 Horas</p>
+            <p><strong>Redes Sociais:</strong> <a href="#"><img src="img/facebook.webp" alt="Facebook"></a><a href="#"><img src="img/instagram.webp" alt="Instagram"></a></p>
+        </section>
 
     <footer>
         <p>&copy; 2024 Sarte Cianorte - Todos os direitos reservados. Website by Edronet</p>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
-/* Reset global */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo Global */
 body {
     font-family: "Parkinsans", sans-serif;
     background-color: #f4f4f4;
@@ -26,7 +25,6 @@ h1 {
     text-align: center;
 }
 
-/* Links globais */
 a {
     text-decoration: none;
     color: inherit;
@@ -38,7 +36,7 @@ header a:hover {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do Header */
+/* Header */
 header {
     background-color: #47E8DD;
     padding: 0 40px;
@@ -53,10 +51,11 @@ header {
 }
 
 header .logo img {
-    max-width: 180px;
+    max-width: 140px;
+    padding: 20px;
 }
 
-/* Navegação */
+/* Nav */
 nav ul {
     list-style: none;
     display: flex;
@@ -128,13 +127,14 @@ nav ul li a.active::before {
 }
 
 
-/* Hero Section */
+/* Hero */
 .hero {
     background-color: #47E8DD;
     color: white;
     padding: 80px 20px;
+    height: 600px;
     text-align: center;
-    background-image: linear-gradient(to right, rgba(71, 232, 221, 0.8), rgba(0, 0, 0, 0.6)), url('img/portal-cianorte.jpg');
+    background-image: linear-gradient(to right, rgba(71, 232, 221, 0.8), rgba(0, 0, 0, 0.6)), url('img/ambulancias3.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -163,8 +163,8 @@ nav ul li a.active::before {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Botões Primários */
-.btn-primary {
+/* Botões */
+/* .btn-primary {
     background-color: #333;
     color: white;
     padding: 15px 30px;
@@ -180,7 +180,7 @@ nav ul li a.active::before {
     background-color: #555;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     transform: translateY(-3px);
-}
+} */
 
 /* Seções */
 section {
@@ -191,16 +191,38 @@ section {
     animation: fadeInUp 1s ease-out;
 }
 
-.servicos, .courses, .contact, .inscription-form {
+.contact {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contact img {
+    width: 24px;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contact p strong {
+    margin-right: 1ch;
+}
+
+.servicos, .cursos, .courses, .contact, .inscription-form {
     background-color: #ffffff;
-    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 40px 30px;
     position: relative;
     overflow: hidden;
 }
 
-.servicos {
+.servicos, .cursos {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -210,7 +232,7 @@ section {
     align-items: stretch;
 }
 
-.servicos h1 {
+.servicos h1, .cursos h1 {
     font-size: 3em;
     text-align: center;
     margin-bottom: 25px;
@@ -221,7 +243,7 @@ section {
     font-family: 'Parkinsans', sans-serif;
 }
 
-.servico {
+.servico, .curso {
     flex: 1;
     text-align: center;
     padding: 20px;
@@ -230,6 +252,26 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
+}
+
+.curso ul {
+    text-align: left;
+}
+
+.curso h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #47E8DD;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.curso-img {
+    width: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    z-index: 1;
 }
 
 h2 {
@@ -262,11 +304,12 @@ h3 {
 }
 
 /* Estilo dos itens de serviço e cursos */
-.service-item {
+.service-item  {
     background-color: #f9f9f9;
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
+    padding: 20px 50px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -288,11 +331,11 @@ h3 {
     border-radius: 8px;
 }
 
-/* Formulário de Inscrição */
+/* Form */
 .inscription-form form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
@@ -332,9 +375,12 @@ h3 {
     outline: none;
 }
 
-.inscription-form button {
+.inscription-form .submit-button {
     background-color: #47E8DD;
-    color: white;
+    margin-top: 20px;
+    grid-column: span 2;
+    text-align: center;
+    color: rgb(0, 0, 0);
     font-size: 1.2em;
     padding: 15px;
     border-radius: 8px;
@@ -342,12 +388,26 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.inscription-form button:hover {
+.inscription-form .submit-button:hover {
     background-color: #3bb9b7;
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1052px) {
+    /* .hero {
+    background-image: linear-gradient(to right, rgba(71, 232, 221, 0.8), rgba(0, 0, 0, 0.6)), url('img/portal-cianorte.jpg');
+    } */
     .hero h1 {
         font-size: 2.5em;
     }
@@ -356,12 +416,12 @@ h3 {
         font-size: 1.2em;
     }
 
-    .servicos {
+    .servicos, .cursos {
         flex-direction: column;
         align-items: center;
     }
 
-    .servico {
+    .servico, .curso {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -380,6 +440,19 @@ h3 {
         padding: 10px 20px;
     }
 
+    .inscription-form label::after {
+        display: none;
+    }
+
+    .inscription-form label {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+    .inscription-form .submit-button {
+        grid-column: span 1;
+    }
 
 
 
