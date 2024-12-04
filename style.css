@@ -33,7 +33,7 @@ a {
 
 header a:hover {
     color: #ffffff;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Header */
@@ -96,7 +96,7 @@ nav ul li a:hover::before {
 
 ul li a.active {
     color: #ffffff;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 nav ul li a.active::before {
@@ -111,8 +111,8 @@ nav ul li a.active::before {
 }
 
 .hamburger div {
-    width: 30px;
-    height: 4px;
+    width: 40px;
+    height: 5px;
     border-radius: 3px;
     background-color: #f0f0f0;
     transition: all 0.3s ease;
@@ -159,6 +159,7 @@ nav ul li a.active::before {
 }
 
 .hero p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     font-size: 1.5em;
     margin-bottom: 25px;
     animation: fadeIn 1s ease-in-out;
@@ -305,6 +306,7 @@ h3 {
     color: #47E8DD;
     font-size: 1.8em;
     font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo dos itens de serviço e cursos */
@@ -333,6 +335,11 @@ h3 {
 .service-item img {
     max-width: 192px;
     border-radius: 8px;
+}
+
+.service-item li {
+    font-size: 1.2em;
+
 }
 
 /* Form */
@@ -408,6 +415,24 @@ footer {
 
 
 /* Responsividade */
+
+
+@media (max-width: 768px) {
+    .contact p {
+        font-size: 11px;
+    }
+    h2{ 
+        font-size: 1.7em;
+    }
+    footer{
+        font-size: 0.6em;
+    }
+    .contact img {
+        width: 16px;
+        margin-bottom: -1px;
+    }
+}               
+
 
 @media (max-width: 1052px) {
     /* .hero {
@@ -496,13 +521,13 @@ footer {
         z-index: 1001;
         cursor: pointer;
         flex-direction: column;
-        gap: 5px;
+        gap: 7px;
     }
 
     .hamburger.active div:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
-        top: 8.5px;
+        top: 11px;
     }
 
     .hamburger.active div:nth-child(2) {
@@ -512,7 +537,7 @@ footer {
     .hamburger.active div:nth-child(3) {
         transform: rotate(-45deg);
         position: relative;
-        top: -8.5px;
+        top: -11px;
     }
 
     #nav-menu.active {
@@ -520,9 +545,6 @@ footer {
     }
 }
 
-body.menu-open {
-    overflow: hidden;
-}
 
 /* Animações */
 @keyframes fadeIn {
