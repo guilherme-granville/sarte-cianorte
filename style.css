@@ -527,7 +527,7 @@ footer {
     .hamburger.active div:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
-        top: 11px;
+        top: 12px;
     }
 
     .hamburger.active div:nth-child(2) {
@@ -537,7 +537,7 @@ footer {
     .hamburger.active div:nth-child(3) {
         transform: rotate(-45deg);
         position: relative;
-        top: -11px;
+        top: -12px;
     }
 
     #nav-menu.active {
