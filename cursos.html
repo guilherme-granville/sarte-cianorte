@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo">
-            <img class="logo-img" src="img/logo-sarte.webp" alt="Sarte Cianorte Logo">
+            <img class="logo-img" src="img/logo-sarte.webp" alt="Sarte Cianorte Logo" loading="lazy">
         </div>
         <div class="hamburger" id="hamburger">
             <div></div>
@@ -30,10 +30,10 @@
     </header>
 
     <section class="courses">
-        <h1>Cursos</h1>
+        <h2>Cursos</h2>
         <div class="cursos">
             <div class="curso service-item">
-        <h2>Curso de Socorrista<img class="curso-img" src="img/logo-socorrista.webp" alt="Socorrista"></h2>
+        <h2>Curso de Socorrista<img class="curso-img" src="img/logo-socorrista.webp" alt="Socorrista" loading="lazy"></h2>
         <p>Neste curso, o aluno será capacitado para oferecer auxílio imediato a vítimas de acidentes e emergências súbitas, seja em casa, no trabalho, no trânsito ou em qualquer outro local. O objetivo é ensinar a reconhecer situações de emergência, avaliar sua gravidade e realizar os primeiros socorros de forma ágil e eficiente.</p>
 
         <h3>Conteúdo Programático Socorrista:</h3>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="curso service-item">
-        <h2>Curso de Brigada de Incêndio<img class="curso-img" src="img/logo-brigada.webp" alt="Socorrista"></h2>
+        <h2>Curso de Brigada de Incêndio<img class="curso-img" src="img/logo-brigada.webp" alt="Brigada de Incêndio"></h2>
         <p>O curso de Brigada de Incêndio capacita os participantes para ações preventivas e de resposta rápida a emergências. Os brigadistas aprenderão a identificar riscos, orientar a equipe, cumprir planos de emergência e agir em situações de combate a incêndios e evacuação de áreas.</p>
 
         <h3>Conteúdo Programático:</h3>
@@ -82,54 +82,75 @@
     <section class="inscription-form">
         <h2>Inscreva-se agora!</h2>
         <form action="#" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Nome" required>
 
-            <label for="nascimento">Data de Nascimento:</label>
-            <input type="date" id="nascimento" name="nascimento" required>
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="date" id="data_nascimento" required>
 
-            <label for="rg">RG:</label>
-            <input type="text" id="rg" name="rg" required>
+            <label for="rg">RG</label>
+            <input type="text" id="rg" placeholder="RG" required>
 
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required>
+            <label for="orgao_emissor">Orgão Emissor</label>
+            <input type="text" id="orgao_emissor" placeholder="Orgão Emissor" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" placeholder="CPF" required>
 
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="E-mail" required>
 
-            <label for="bairro">Bairro:</label>
-            <input type="text" id="bairro" name="bairro" required>
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" placeholder="Endereço" required>
 
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required>
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" placeholder="Bairro" required>
 
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" required>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" placeholder="Cidade" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" placeholder="CEP" required>
 
-            <label for="celular">Celular:</label>
-            <input type="tel" id="celular" name="celular" required>
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" placeholder="Telefone" required>
 
-            <label for="profissao">Profissão:</label>
-            <input type="text" id="profissao" name="profissao" required>
+            <label for="celular">Celular</label>
+            <input type="text" id="celular" placeholder="Celular" required>
 
-            <label for="local_trabalho">Local de Trabalho:</label>
-            <input type="text" id="local_trabalho" name="local_trabalho" required>
+            <label for="profissao">Profissão</label>
+            <input type="text" id="profissao" placeholder="Profissão" required>
 
-            <label for="curso">Curso:</label>
-            <select id="curso" name="curso" required>
+            <label for="local_trabalho">Local de Trabalho</label>
+            <input type="text" id="local_trabalho" placeholder="Local de Trabalho" required>
+
+            <label for="nome_pai">Nome do Pai</label>
+            <input type="text" id="nome_pai" placeholder="Nome do Pai">
+
+            <label for="nome_mae">Nome da Mãe</label>
+            <input type="text" id="nome_mae" placeholder="Nome da Mãe" required>
+
+            <label for="naturalidade">Naturalidade (Cidade/Estado)</label>
+            <input type="text" id="naturalidade" placeholder="Naturalidade" required>
+
+            <label for="escolaridade">Escolaridade</label>
+            <select id="escolaridade" required>
+                <option value="">Escolaridade...</option>
+                <option value="fundamental">Ensino Fundamental</option>
+                <option value="medio">Ensino Médio</option>
+                <option value="graduacao">Graduação</option>
+                <option value="pos">Pós Graduação</option>
+            </select>
+
+            <label for="curso">Curso</label>
+            <select id="curso" required>
                 <option value="">Selecionar Curso...</option>
                 <option value="socorrista">Socorrista</option>
                 <option value="brigadista">Brigadista</option>
                 <option value="instrumentista">Instrumentista</option>
             </select>
 
-            <input class="submit-button" type="submit" value="Inscrever-se">
+            <button class="submit-button" type="submit">Enviar Inscrição</button>
         </form>
         </section>
     
@@ -139,12 +160,14 @@
             <p><strong>Endereço: </strong>Rua Tocantins, 174-A, Zona 03, Cianorte, Paraná</p>
             <p><strong>Telefone: </strong>(44) 3629 5619 | (44) 99858 6868 - U.T.I Móvel</p>
             <p><strong>Horário de Atendimento: </strong>  24 Horas</p>
-            <p><strong>Redes Sociais:</strong> <a href="#"><img src="img/facebook.webp" alt="Facebook"></a><a href="#"><img src="img/instagram.webp" alt="Instagram"></a></p>
+            <p><strong>Redes Sociais:</strong> <a href="#"><img src="img/facebook.webp" alt="Facebook" loading="lazy"></a><a href="#"><img src="img/instagram.webp" alt="Instagram" loading="lazy"></a></p>
         </section>
 
     <footer>
         <p>&copy; 2024 Sarte Cianorte - Todos os direitos reservados. Website by Edronet</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="inputs.js"></script>
 </body>
 </html>

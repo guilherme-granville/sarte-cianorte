@@ -21,7 +21,7 @@ h1 {
     font-size: 3em;
 }
 
-.about h1 {
+ h1 {
     text-align: center;
 }
 
@@ -38,7 +38,7 @@ header a:hover {
 
 /* Header */
 header {
-    background-color: #47E8DD;
+    background-color: #47e8dd;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ header {
 
 header .logo img {
     max-width: 140px;
-    padding: 20px;
+    padding: 5px;
 }
 
 /* Nav */
@@ -187,6 +187,7 @@ nav ul li a.active::before {
 section {
     margin-bottom: 40px;
     padding: 60px 20px;
+    text-align: center;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-out;
@@ -194,6 +195,7 @@ section {
 
 .contact {
     margin-bottom: 0;
+    padding: 15px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,13 +205,14 @@ section {
 .contact img {
     width: 24px;
     align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: -8px;
 }
 .contact p {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    font-size: 15px;
 }
 .contact p strong {
     margin-right: 1ch;
@@ -287,7 +290,7 @@ h2 {
     font-family: 'Parkinsans', sans-serif;
 }
 
-h2::after {
+h2::before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -336,7 +339,6 @@ h3 {
 .inscription-form form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
@@ -358,12 +360,12 @@ h3 {
     align-items: center;
     font-size: 1.2em;
     color: #333;
-    margin-bottom: 10px;
 }
 
 .inscription-form input,
 .inscription-form select {
     padding: 12px;
+    margin: 0 10px 10px 10px;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -404,13 +406,15 @@ footer {
 }
 
 
+
 /* Responsividade */
+
 @media (max-width: 1052px) {
     /* .hero {
     background-image: linear-gradient(to right, rgba(71, 232, 221, 0.8), rgba(0, 0, 0, 0.6)), url('img/portal-cianorte.jpg');
     } */
     .hero h1 {
-        font-size: 2.2em;
+        font-size: 2.1em;
     }
 
     .hero p {
@@ -449,11 +453,22 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 0;
+        font-size: 1em;
+    }
+
+    .inscription-form input,
+    .inscription-form select {
+        margin: 0 0 10px 0;
     }
 
     .inscription-form .submit-button {
         grid-column: span 1;
     }
+
+    .curso-img {
+        display: none;
+    }
+
 
 
 
